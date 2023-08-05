@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import Category from '../../Category/Category';
+
 import { Link } from 'react-router-dom';
+import { SERVERURL } from '../../../lib/serverurl';
 
 const LeftNave = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/news-categories')
+        fetch(`${SERVERURL}/news-categories`)
             .then(res => res.json())
             .then(data=>setCategories(data))
     },[])

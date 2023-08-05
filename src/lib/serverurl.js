@@ -1,0 +1,1 @@
+export const SERVERURL = 'https://news-server-3hqp.onrender.com';
